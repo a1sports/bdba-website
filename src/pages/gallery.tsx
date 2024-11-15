@@ -1,4 +1,4 @@
-function About() {
+function Gallery() {
   return (
     <div
       className="
@@ -13,4 +13,4 @@ md:bg-cover sm:bg-top sm:h-auto relative overflow-hidden"
   );
 }
 
-export default About;
+export default Gallery;
