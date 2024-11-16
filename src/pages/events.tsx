@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { events } from "../const";
 import EventsCards from "../components/eventCards";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -37,14 +37,22 @@ function Events() {
     });
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      shiftRight();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div
       className="
-w-screen flex flex-col h-auto md:h-screen bg-black justify-center items-center
-bg-[rgba(0,0,0,0.5)]
-bg-[url(./assets/images/bg-image.jpg)] 
-bg-cover bg-no-repeat bg-center p-4
-md:bg-cover sm:bg-top sm:h-auto relative overflow-hidden"
+    w-screen h-screen flex flex-col bg-black justify-center items-center
+    bg-[rgba(0,0,0,0.5)] bg-[url(./assets/images/bg-image.jpg)]
+    bg-cover bg-no-repeat bg-center relative overflow-hidden
+    p-4
+  "
     >
       <div
         ref={carouselRef}
