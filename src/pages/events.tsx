@@ -51,9 +51,7 @@ function Events() {
     w-screen h-screen flex flex-col bg-black justify-center items-center
     bg-[rgba(0,0,0,0.5)] bg-[url(./assets/images/bg-image.jpg)]
     bg-cover bg-no-repeat bg-center relative overflow-hidden
-    p-4
-  "
-    >
+    p-4">
       <div
         ref={carouselRef}
         className="flex justify-center items-center space-x-10"
@@ -64,15 +62,21 @@ function Events() {
       </div>
       <button
         onClick={shiftRight}
-        className="absolute right-10 top-1/2 -translate-y-1/2 translate-x-1/2 bg-gray-800 text-cyan-500 border-cyan-500 hover:bg-gray-700"
+        className="
+          absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-cyan-500 
+          border-cyan-500 hover:bg-gray-700 z-10 p-2 rounded-full
+        "
       >
-        <ChevronRight className="h-4 w-4" />
+        <ChevronRight className="h-6 w-6" />
       </button>
       <button
         onClick={shiftLeft}
-        className="absolute left-10 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-gray-800 text-cyan-500 border-cyan-500 hover:bg-gray-700"
+        className="
+          absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-cyan-500 
+          border-cyan-500 hover:bg-gray-700 z-10 p-2 rounded-full
+        "
       >
-        <ChevronLeft className="h-4 w-4" />
+        <ChevronLeft className="h-6 w-6" />
       </button>
     </div>
   );
