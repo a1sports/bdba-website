@@ -10,12 +10,18 @@ export default function Header() {
   return (
     <div className="bg-gray-900 text-white p-4 w-full fixed top-0 left-0 z-50">
       <div className="container mx-auto flex flex-wrap justify-between items-center">
-        <div className="text-4xl sm:text-3xl font-bold text-pink-500 ">B.D.B.A.</div>
+        <div className="text-4xl sm:text-3xl font-bold text-pink-500 ">
+          B.D.B.A.
+        </div>
         <button
           className="lg:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} className="text-black" />}
+          {isMenuOpen ? (
+            <X size={24} className="text-black" />
+          ) : (
+            <Menu size={24} className="text-black" />
+          )}
         </button>
         <nav
           className={`w-full lg:w-auto ${

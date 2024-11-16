@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { events } from "../const";
 import EventsCards from "../components/eventCards";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -37,9 +37,17 @@ function Events() {
     });
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      shiftRight();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div
-    className="
+      className="
     w-screen h-screen flex flex-col bg-black justify-center items-center
     bg-[rgba(0,0,0,0.5)] bg-[url(./assets/images/bg-image.jpg)]
     bg-cover bg-no-repeat bg-center relative overflow-hidden

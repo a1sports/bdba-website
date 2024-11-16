@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Team1 from "../assets/images/team1.jpg";
 import Team2 from "../assets/images/team2.jpg";
@@ -14,7 +14,7 @@ function HomeCarousel() {
     {
       date: "NOV 15 - NOV 17",
       content: (
-        <div className="flex flex-col space-y-4 justify-center items-center mt-10">
+        <div className="flex flex-col space-y-4 justify-center items-center">
           <p className="text-[#cb6ce6] font-bold text-5xl sm:text-4xl italic">
             BDBA
           </p>
@@ -27,10 +27,10 @@ function HomeCarousel() {
           <p className="text-[#d34237] font-bold text-3xl sm:text-2xl">
             NOV 15 - NOV 17
           </p>
-          {/* <img
+          <img
             src={Shettle}
-            className="h-40 w-40 sm:h-20 sm:w-20 rotate-[135deg]"
-          /> */}
+            className="h-40 w-40 sm:h-40 sm:w-40 rotate-[135deg]"
+          />
         </div>
       ),
     },
@@ -81,6 +81,14 @@ function HomeCarousel() {
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () =>
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="relative w-full h-full">
