@@ -1,5 +1,4 @@
 import HomeCorousel from "../components/homeCorousel";
-import Shettle from "../assets/images/shettle.png";
 
 function Home() {
   return (
@@ -12,13 +11,6 @@ function Home() {
     "
     >
       <HomeCorousel />
-      <img
-        src={Shettle}
-        className="
-          h-40 w-40 rotate-[135deg] mt-4 absolute -right-[20%] sm:-right-[6%] bottom-8
-          sm:h-20 sm:w-20 md:h-40 md:w-40
-        "
-      />
     </div>
   );
 }
