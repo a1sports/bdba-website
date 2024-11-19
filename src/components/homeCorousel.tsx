@@ -59,7 +59,7 @@ function HomeCarousel() {
             />
             <img
               src={Team4}
-              className="w-20 sh-20 sm:w-16 sm:h-16 md:w-28 md:h-28 rounded-full"
+              className="w-20 h-20 sm:w-16 sm:h-16 md:w-28 md:h-28 rounded-full"
               alt="Team 4"
             />
             <img
