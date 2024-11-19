@@ -118,6 +118,41 @@ export const galleries: GalleryProps[] = [
     description: "Award Trophy",
     imagePath: "/assets/images/gallery/trophy.jpeg",
   },
+  {
+    id: 18,
+    description: "Final Match",
+    imagePath: "/assets/images/gallery/final.jpeg",
+  },
+  {
+    id: 19,
+    description: "Final Match",
+    imagePath: "/assets/images/gallery/presentation1.jpeg",
+  },
+  {
+    id: 20,
+    description: "Champion Celebration",
+    imagePath: "/assets/images/gallery/champion.jpeg",
+  },
+  {
+    id: 21,
+    description: "Champion Celebration",
+    imagePath: "/assets/images/gallery/champion2.jpeg",
+  },
+  {
+    id: 22,
+    description: "Champion Celebration",
+    imagePath: "/assets/images/gallery/champion3.jpeg",
+  },
+  {
+    id: 23,
+    description: "Champion Celebration",
+    imagePath: "/assets/images/gallery/champion4.jpeg",
+  },
+  {
+    id: 24,
+    description: "Champion Celebration",
+    imagePath: "/assets/images/gallery/champion5.jpeg",
+  },
 ];
 
 
